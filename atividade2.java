@@ -6,9 +6,8 @@ public class atividade2 {
         System.out.print("Digite o primeiro número: ");
         double n1 = entrada.nextDouble();
 
-        String operacao = " ";
         System.out.println("Informe a operação (+, -, * ou /): ");
-        operacao = entrada.nextLine();
+        String operacao = entrada.next();
 
         System.out.print("Digite o segundo número: ");
         double n2 = entrada.nextDouble();
@@ -26,9 +25,13 @@ public class atividade2 {
             multiplicacao = (n1 * n2);
             System.out.print("A multiplicação entre os dois termos é: " + multiplicacao + "\n");
         } else if (operacao == "/") {
+            if (n2 == 0) {
+                System.out.println("Operação inválida");
+            } else {
             double divisao;
             divisao = (n1 / n2);
             System.out.print("A divisão entre os termos é: " + divisao + "\n");
+            }
         } else {
             System.out.print("Operação inválida.");
         }
