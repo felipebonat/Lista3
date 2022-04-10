@@ -6,25 +6,25 @@ public class atividade2 {
         System.out.print("Digite o primeiro número: ");
         double n1 = entrada.nextDouble();
 
-        System.out.println("Informe a operação (+, -, * ou /): ");
-        String operacao = entrada.next();
+        System.out.print("Informe a operação (+, -, * ou /): ");
+        char operacao = entrada.next().charAt(0);
 
         System.out.print("Digite o segundo número: ");
         double n2 = entrada.nextDouble();
 
-        if (operacao == "+") {
+        if (operacao == '+') {
             double soma;
             soma = (n1 + n2); 
             System.out.print("A soma entre os dois termos é: " + soma + "\n");
-        } else if (operacao == "-") {
+        } else if (operacao == '-') {
             double subtracao;
             subtracao = (n1 - n2);
             System.out.print("A subtração entre os dois termos é: " + subtracao + "\n");
-        } else if (operacao == "*") {
+        } else if (operacao == '*') {
             double multiplicacao;
             multiplicacao = (n1 * n2);
             System.out.print("A multiplicação entre os dois termos é: " + multiplicacao + "\n");
-        } else if (operacao == "/") {
+        } else if (operacao == '/') {
             if (n2 == 0) {
                 System.out.println("Operação inválida");
             } else {
